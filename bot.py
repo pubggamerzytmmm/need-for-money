@@ -572,11 +572,3 @@ def time_now(bot, arg):
 
 
 
-
-question_handler = CommandHandler('question', question)
-start_handler = CommandHandler('start', start)
-answer_handler = MessageHandler(Filters.text, answer_start)
-dispatcher.add_handler(start_handler)
-dispatcher.add_handler(question_handler)
-dispatcher.add_handler(answer_handler)
-updater.start_polling(timeout=5, clean=True )
